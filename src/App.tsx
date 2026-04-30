@@ -94,6 +94,7 @@ function App() {
                 <div>
                   <h3 className="font-bold text-lg mb-1 tracking-wide">TUTTI I MARTEDÌ</h3>
                   <p className="text-white/60">dalle 16:00</p>
+                  <p className="text-gold/80 text-sm font-medium mt-2">Primo appuntamento: 19 Maggio</p>
                 </div>
              </div>
           </motion.div>
