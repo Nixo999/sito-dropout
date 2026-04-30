@@ -3,14 +3,17 @@ import { Calendar, MapPin } from 'lucide-react';
 import { motion } from 'motion/react';
 import { AnimatedBackground } from './components/AnimatedBackground';
 import { DrinksSVG } from './components/Graphics';
+import { Navbar } from './components/Navbar';
+import { ContactForm } from './components/ContactForm';
 
 function App() {
   return (
-    <div className="relative min-h-screen text-white font-sans selection:bg-gold selection:text-black flex flex-col pt-16 pb-12 px-6 sm:px-12">
+    <div className="relative min-h-screen text-white font-sans selection:bg-gold selection:text-black flex flex-col pb-12 px-6 sm:px-12">
       <AnimatedBackground />
+      <Navbar />
 
       {/* Main Content Container */}
-      <main className="flex-1 w-full max-w-3xl mx-auto flex flex-col items-center justify-center space-y-16 lg:space-y-24 z-10">
+      <main id="home" className="flex-1 w-full max-w-3xl mx-auto flex flex-col items-center justify-center space-y-16 lg:space-y-24 z-10 pt-32 md:pt-40">
         
         {/* Header Section */}
         <motion.section 
@@ -89,7 +92,7 @@ function App() {
              <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-yellow-500/0 via-gold/50 to-yellow-500/0 opacity-0 group-hover:opacity-100 transition-opacity"></div>
              <div className="p-6 flex items-start gap-4">
                 <div className="mt-1">
-                  <Calendar className="w-6 h-6 text-gold" strokeWidth={1.5} />
+                   <Calendar className="w-6 h-6 text-gold" strokeWidth={1.5} />
                 </div>
                 <div>
                   <h3 className="font-bold text-lg mb-1 tracking-wide">TUTTI I MARTEDÌ</h3>
@@ -109,7 +112,7 @@ function App() {
              <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-yellow-500/0 via-gold/50 to-yellow-500/0 opacity-0 group-hover:opacity-100 transition-opacity"></div>
              <div className="p-6 flex items-start gap-4">
                 <div className="mt-1">
-                  <MapPin className="w-6 h-6 text-gold" strokeWidth={1.5} />
+                   <MapPin className="w-6 h-6 text-gold" strokeWidth={1.5} />
                 </div>
                 <div>
                   <h3 className="font-bold text-lg mb-1 tracking-wide line-clamp-1">PAN PER FOCACCIA - BICOCCA</h3>
@@ -121,6 +124,9 @@ function App() {
              </div>
           </motion.div>
         </section>
+
+        {/* Contact Form Section */}
+        <ContactForm />
 
       </main>
       
