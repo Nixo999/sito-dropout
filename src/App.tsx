@@ -5,6 +5,7 @@ import { AnimatedBackground } from './components/AnimatedBackground';
 import { DrinksSVG } from './components/Graphics';
 import { Navbar } from './components/Navbar';
 import { ContactForm } from './components/ContactForm';
+import { EventPanel } from './components/EventPanel';
 
 function App() {
   return (
@@ -127,6 +128,9 @@ function App() {
 
         {/* Contact Form Section */}
         <ContactForm />
+
+        {/* Next Event Panel */}
+        <EventPanel />
 
       </main>
       
