@@ -126,11 +126,11 @@ function App() {
           </motion.div>
         </section>
 
-        {/* Contact Form Section */}
-        <ContactForm />
-
         {/* Next Event Panel */}
         <EventPanel />
+
+        {/* Contact Form Section */}
+        <ContactForm />
 
       </main>
       
