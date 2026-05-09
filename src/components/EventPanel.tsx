@@ -14,11 +14,11 @@ export const EventPanel: React.FC = () => {
     >
       <div className="glass-panel border border-gold/20 rounded-2xl overflow-hidden box-glow flex flex-col">
         {/* Top Image */}
-        <div className="h-64 md:h-80 w-full relative overflow-hidden">
+        <div className="w-full relative overflow-hidden bg-black">
           <img 
             src="/event_vol1.png" 
             alt="Drop Out Vol 1 Event" 
-            className="w-full h-full object-cover"
+            className="w-full h-auto object-contain max-h-[600px] mx-auto"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
           
