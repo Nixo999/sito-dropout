@@ -52,39 +52,39 @@ export const CookieBanner: React.FC = () => {
     <AnimatePresence>
       {showBanner && (
         <motion.div
-          initial={{ y: 100, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ y: 100, opacity: 0 }}
+          initial={{ x: 100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          exit={{ x: 100, opacity: 0 }}
           transition={{ duration: 0.5, ease: 'easeOut' }}
-          className="fixed bottom-6 left-6 right-6 z-50 flex justify-center pointer-events-none"
+          className="fixed bottom-6 right-6 z-50 w-[calc(100%-3rem)] md:w-96 pointer-events-none"
         >
-          <div className="pointer-events-auto glass-panel border border-gold/20 rounded-lg p-6 md:p-8 max-w-4xl w-full flex flex-col md:flex-row items-center justify-between gap-6 box-glow relative">
+          <div className="pointer-events-auto bg-surface border border-gold/20 rounded-lg p-5 md:p-6 flex flex-col gap-5 box-glow relative">
             <button 
               onClick={handleClose}
-              className="absolute top-3 right-3 text-white/40 hover:text-gold transition-colors"
+              className="absolute top-2 right-2 text-white/40 hover:text-gold transition-colors"
               aria-label="Chiudi"
             >
-              <X size={20} />
+              <X size={18} />
             </button>
 
-            <div className="flex-1 text-sm md:text-base text-white/80 leading-relaxed pr-4">
+            <div className="text-xs md:text-sm text-white/80 leading-relaxed pr-2">
               <p>
-                Utilizziamo i cookie per offrirti la migliore esperienza sul nostro sito. 
-                Puoi scoprire di più su quali cookie stiamo utilizzando o disattivarli nella nostra{' '}
+                Utilizziamo i cookie per offrirti la migliore esperienza. 
+                Scopri di più nella nostra{' '}
                 <a href="/privacy" className="text-gold hover:underline font-medium">Privacy Policy</a>.
               </p>
             </div>
 
-            <div className="flex items-center gap-4 shrink-0">
+            <div className="flex items-center gap-3 justify-end">
               <button
                 onClick={handleReject}
-                className="px-6 py-2 text-sm font-bold uppercase tracking-widest text-white/60 hover:text-white transition-colors"
+                className="px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-white/60 hover:text-white transition-colors"
               >
                 Rifiuta
               </button>
               <button
                 onClick={handleAccept}
-                className="px-8 py-2 bg-gold text-black font-bold uppercase tracking-widest rounded hover:bg-gold-dim transition-all hover:scale-105 active:scale-95"
+                className="px-6 py-1.5 bg-gold text-black text-xs font-bold uppercase tracking-widest rounded hover:bg-gold-dim transition-all hover:scale-105 active:scale-95"
               >
                 Accetta
               </button>
