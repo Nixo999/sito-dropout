@@ -6,6 +6,8 @@ import { DrinksSVG } from './components/Graphics';
 import { Navbar } from './components/Navbar';
 import { ContactForm } from './components/ContactForm';
 import { EventPanel } from './components/EventPanel';
+import { CookieBanner } from './components/CookieBanner';
+
 
 function App() {
   return (
@@ -144,6 +146,8 @@ function App() {
       >
         © {new Date().getFullYear()} DROP OUT. Tutti i diritti riservati.
       </motion.footer>
+
+      <CookieBanner />
     </div>
   );
 }
