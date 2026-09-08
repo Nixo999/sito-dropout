@@ -139,12 +139,24 @@ function App() {
       {/* Footer minimal */}
       <motion.footer 
         initial={{ opacity: 0 }}
-        whileInView={{ opacity: 0.4 }}
+        whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1, delay: 0.8 }}
-        className="relative z-10 w-full text-center mt-24 mb-4 hover:opacity-100 transition-opacity text-xs tracking-widest text-gold font-sans uppercase"
+        className="relative z-10 w-full text-center mt-24 mb-4 text-xs tracking-widest text-gold font-sans uppercase"
       >
-        © {new Date().getFullYear()} DROP OUT. Tutti i diritti riservati.
+        <p className="opacity-40 hover:opacity-100 transition-opacity">
+          © {new Date().getFullYear()} DROP OUT. Tutti i diritti riservati.
+        </p>
+        {/* Firma DenkiCode, come su ogni sito consegnato: a opacità piena, o non si legge */}
+        <a
+          href="https://denkicode.com"
+          target="_blank"
+          rel="noopener"
+          className="mt-3 inline-flex items-center gap-2 normal-case tracking-normal"
+        >
+          <img src="/logo-denkicode.svg" alt="" width={18} height={18} className="h-[18px] w-auto" />
+          <span>Powered by <strong>DenkiCode</strong></span>
+        </a>
       </motion.footer>
 
       <CookieBanner />
